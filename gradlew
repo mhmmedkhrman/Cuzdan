@@ -1,9 +1,7 @@
-#!/usr/bin/env sh
+#!/bin/sh
 ##############################################################################
-## Gradle start script for UN*X                                              ##
+## Gradle wrapper script for UN*X systems                                  ##
 ##############################################################################
-if [ -z "$GRADLE_HOME" ]; then
-  exec "`dirname "$0"`"/gradle/wrapper/gradle-wrapper.jar "$@"
-else
-  exec "$GRADLE_HOME/bin/gradle" "$@"
-fi
+APP_HOME=$(dirname "$0")
+CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
+exec java -cp "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"
